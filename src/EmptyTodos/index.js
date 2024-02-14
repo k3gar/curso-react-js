@@ -3,7 +3,7 @@ import React from "react";
 
 function EmptyTodos(){
     return(
-        <p>!re tu Primer TODO</p>
+        <p>Escribe tu Primer TODO</p>
     )
 }
 
