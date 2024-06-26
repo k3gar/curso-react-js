@@ -1,6 +1,6 @@
 import './CreateTodoButton.css';
 
-function CreateTodoButton() {
+function CreateTodoButton(props) {
   return (
     <button
       className="CreateTodoButton"
@@ -9,6 +9,7 @@ function CreateTodoButton() {
           console.log('le diste click')
           console.log(event)
           console.log(event.target)
+          props.toggleModal()
         }
       }
     >+</button>
