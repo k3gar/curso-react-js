@@ -39,6 +39,15 @@ function TodoProvider({children}){
       saveTodos(newTodos)
     }
 
+    const addTodo = (text) => {
+      const newTodos = [...todos]
+      newTodos.push({
+        text,
+        completed: false
+      })
+      saveTodos(newTodos)
+    }
+
     return (
     <TodoContext.Provider value={{
         loading,
@@ -52,7 +61,8 @@ function TodoProvider({children}){
         deleteTodo,
         openModal,
         setOpenModal,
-        toggleModal
+        toggleModal,
+        addTodo,
       }}>
         {children}
     </TodoContext.Provider>)
